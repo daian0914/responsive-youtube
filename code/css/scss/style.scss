@@ -1,3 +1,6 @@
+@import "mixin";
+
+
 html{
     font-size: 100%;
 }
@@ -27,9 +30,20 @@ body{
     margin: 0 auto;
     padding: 0 4%;
     height: 170px;
+    @include mq(sp) {
+       flex-direction:column ;
+       height: auto;
+       line-height: 40px;
+       margin-top: 20px;
+       &__logo{
+        margin-top: 20px;
+       }
+
+         }
     &__logo{
         color: #24292e;
         font-weight: 600;
+        font-size: 2.4rem;
     }
     &__nav{
         display: flex;
@@ -40,7 +54,12 @@ body{
                 opacity: 0.5;
             }
         }
+        &-pic{
+            width: 30px;
+        }
         
     }
 }
+
+
 
